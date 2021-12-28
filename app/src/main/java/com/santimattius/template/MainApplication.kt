@@ -4,20 +4,15 @@ import android.app.Application
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
-import com.santimattius.template.di.AppConfiguration
-import com.santimattius.template.ui.theme.AndroidarchtemplateTheme
+import com.santimattius.template.ui.theme.AndroidArchTemplateTheme
+import dagger.hilt.android.HiltAndroidApp
 
-class MainApplication : Application() {
-
-    override fun onCreate() {
-        super.onCreate()
-        AppConfiguration.init(app = this)
-    }
-}
+@HiltAndroidApp
+class MainApplication : Application()
 
 @Composable
 fun PicturesApplication(content: @Composable () -> Unit) {
-    AndroidarchtemplateTheme {
+    AndroidArchTemplateTheme {
         Surface(color = MaterialTheme.colors.background) {
             content()
         }

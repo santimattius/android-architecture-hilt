@@ -7,9 +7,11 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import coil.annotation.ExperimentalCoilApi
 import com.santimattius.template.core.presentation.openLink
 import com.santimattius.template.ui.screen.HomeScreen
+import dagger.hilt.android.AndroidEntryPoint
 
 @ExperimentalCoilApi
 @ExperimentalFoundationApi
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -11,19 +11,19 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.annotation.ExperimentalCoilApi
 import com.santimattius.template.R
 import com.santimattius.template.ui.models.PictureUiModel
 import com.santimattius.template.ui.models.isEmpty
 import com.santimattius.template.ui.viewmodels.HomeViewModel
-import org.koin.androidx.compose.getViewModel
 
 @ExperimentalCoilApi
 @ExperimentalFoundationApi
 @Composable
 fun HomeScreen(
-    viewModel: HomeViewModel = getViewModel(),
-    onClick: (PictureUiModel) -> Unit
+    viewModel: HomeViewModel = viewModel(),
+    onClick: (PictureUiModel) -> Unit,
 ) {
     Scaffold(
         topBar = {
@@ -50,7 +50,7 @@ const val LIST_OF_PICTURE_TAG = "list_of_picture_test_tag"
 @Composable
 fun ListOfPicture(
     pictures: List<PictureUiModel>,
-    onClick: (PictureUiModel) -> Unit = {}
+    onClick: (PictureUiModel) -> Unit = {},
 ) {
     LazyColumn(modifier = Modifier.testTag(LIST_OF_PICTURE_TAG)) {
         items(pictures) { picture ->
