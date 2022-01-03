@@ -8,12 +8,15 @@ import androidx.lifecycle.viewModelScope
 import com.santimattius.template.domain.usecases.GetPictures
 import com.santimattius.template.ui.models.initialState
 import com.santimattius.template.ui.models.mapping.asUiModels
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeViewModel(
-    private val getPictures: GetPictures
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val getPictures: GetPictures,
 ) : ViewModel() {
 
     var state by mutableStateOf(initialState())

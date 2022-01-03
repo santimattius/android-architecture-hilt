@@ -23,19 +23,6 @@ project.ext {
         androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     }
 
-    koin = Group {
-        // Koin main features for Android (Scope,ViewModel ...)
-        implementation "io.insert-koin:koin-android:$koin_version"
-        // Koin Java Compatibility
-        implementation "io.insert-koin:koin-android-compat:$koin_version"
-        // Koin for Jetpack WorkManager
-        implementation "io.insert-koin:koin-androidx-workmanager:$koin_version"
-        // Koin for Jetpack Compose
-        implementation "io.insert-koin:koin-androidx-compose:$koin_version"
-
-        testImplementation "io.insert-koin:koin-test:$koin_version"
-    }
-
     accompanist = Group {
         implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist_version"
         implementation "com.google.accompanist:accompanist-swiperefresh:$accompanist_version"
@@ -89,7 +76,7 @@ project.ext {
         androidTestImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutine_testing_version") {
             exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
         }
-        androidTestImplementation "io.insert-koin:koin-test:$koin_version"
+
         // AndroidJUnitRunner and JUnit Rules
         androidTestImplementation "androidx.test:runner:$runner_version"
         androidTestImplementation "androidx.test:rules:$rule_version"
