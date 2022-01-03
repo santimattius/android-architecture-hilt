@@ -1,6 +1,7 @@
-# Android Architecture Guide Template
+# Android Architecture Hilt
+## Using dagger hilt as dependency injector
 
-This is a template to build an Android app applying good practices and using a clean architecture, you will see that the code is super decoupled with external frameworks and even with the same Android framework, this will help you to model your domain purely in Kotlin without generating external dependencies.
+This is a Android app applying good practices and using a clean architecture, you will see that the code is super decoupled with external frameworks and even with the same Android framework, this will help you to model your domain purely in Kotlin without generating external dependencies.
 
 <p align="center">
   <img src="https://github.com/santimattius/android-architecture-guide/blob/master/screenshoot/android-clean-arch-capture.png?raw=true" alt="App Capture"/>
@@ -33,8 +34,8 @@ Below you will find the libraries used to build the template and according to my
 
 - **Jetpack Compose**:
   - https://developer.android.com/jetpack/compose
-- **Koin** - dependencie provider: 
-  - https://insert-koin.io/
+- **Hilt** - dependencie provider: 
+  - https://developer.android.com/training/dependency-injection/hilt-android
 - **Retrofit** - networking: 
   - https://square.github.io/retrofit/
 - **Gson** - json parser:
