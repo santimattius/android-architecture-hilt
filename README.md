@@ -7,6 +7,8 @@ This is a Android app applying good practices and using a clean architecture, yo
   <img src="https://github.com/santimattius/android-architecture-guide/blob/master/screenshoot/android-clean-arch-capture.png?raw=true" alt="App Capture"/>
 </p>
 
+# Migrating from Koin to Hilt
+Check this pull request -> [here](https://github.com/santimattius/android-architecture-hilt/pull/1/files)
 
 # Application architecture
 
